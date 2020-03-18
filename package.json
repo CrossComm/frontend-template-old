@@ -1,0 +1,42 @@
+{
+    "name": "duke-symmetry-frontend",
+    "version": "1.0.0",
+    "description": "Frontend repository for the Duke Symmetry project",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CrossComm/duke-symmetry-frontend.git"
+    },
+    "author": "",
+    "bugs": {
+        "url": "https://github.com/CrossComm/duke-symmetry-frontend/issues"
+    },
+    "homepage": "https://github.com/CrossComm/duke-symmetry-frontend#readme",
+    "scripts": {
+        "dev": "NODE_ENV=staging node_modules/.bin/parcel src/index.html",
+        "start": "npm run dev",
+        "clean": "rm -rf .cache && rm -rf dist/ && rm -rf .firebase/ && rm -rf node_modules && npm i",
+        "build": "parcel build src/index.html"
+    },
+    "dependencies": {
+        "reach-router": "0.0.0",
+        "react": "^16.13.0",
+        "react-dom": "^16.13.0",
+        "styled-components": "^5.0.1"
+    },
+    "devDependencies": {
+        "@types/react": "^16.9.23",
+        "@types/react-dom": "^16.9.5",
+        "@types/styled-components": "^5.0.1",
+        "husky": "^4.2.3",
+        "parcel-bundler": "^1.12.4",
+        "pretty-quick": "^2.0.1",
+        "prettier": "^1.19.1",
+        "typescript": "^3.8.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    }
+}
